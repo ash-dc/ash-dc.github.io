@@ -21,7 +21,7 @@
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 3,
+          zoom: 2,
           center: new google.maps.LatLng(2.8,-187.3),
           mapTypeId: 'hybrid'
         });
@@ -43,14 +43,12 @@
           var marker = new google.maps.Marker({
             position: latLng,
             map: map
-            
           });
-            
-        }   
+        }
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkCOD5euDkHXxFlbscmLQ2ZTQWoKNmJSw&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
     </script>
   </body>
 </html>
