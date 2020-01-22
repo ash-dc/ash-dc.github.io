@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 1000px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+	   html, body {
+		background-color:black;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+	  h1 { text-align:center;
+			color:white;}
+    </style>
+  </head>
+  <body>
+    <h1>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Calangute 
+  var beaches = {lat:15.543065, lng:73.756289};
+  // The map, centered at Calangute
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom:15,center: beaches, mapTypeId: google.maps.MapTypeId.SATELLITE});
+  // The marker, positioned at Calangute
+ 
+  var marker = new google.maps.Marker({position:beaches,map: map,label:{color:"Black", fontSize: "20px",text:"Calangute"}});
+ 
+}
+    </script>
+  
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkCOD5euDkHXxFlbscmLQ2ZTQWoKNmJSw&callback=initMap">
+    </script>
+  </body>
+</html>
