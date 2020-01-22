@@ -42,16 +42,11 @@
           var latLng = new google.maps.LatLng(coords[1],coords[0]);
           var marker = new google.maps.Marker({
             position: latLng,
-            map: map,
-            animation: google.maps.Animation.DROP,
+            map: map
+            
           });
-            marker.addListener('click', toggleBounce);
-        }   function toggleBounce() {
-              if (marker.getAnimation() !== null) {
-                  marker.setAnimation(null);
-  }           else {
-                  marker.setAnimation(google.maps.Animation.BOUNCE);
-  }
+            
+        }   
       }
     </script>
     <script async defer
